@@ -290,3 +290,236 @@ body {
 .auth-back a:hover {
   text-decoration: underline;
 }
+
+.navbar-user {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ── Geral ── */
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111;
+}
+
+.sem-resultados {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.voltar-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* ── Busca e filtros ── */
+.busca-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+.busca-input:focus {
+  border-color: var(--primary);
+}
+
+.categorias-filtro {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 7px 14px;
+  border-radius: 100px;
+  border: 1.5px solid #d1d5db;
+  background: white;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.chip-ativo {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+/* ── Cards de profissionais ── */
+.profissionais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.profissional-card {
+  background: white;
+  border: 1.5px solid #dde8e1;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.profissional-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(74, 124, 89, 0.12);
+}
+
+.profissional-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.profissional-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profissional-nome {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+}
+
+.profissional-categoria {
+  font-size: 13px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.profissional-cidade {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.profissional-rodape {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.profissional-avaliacao {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.profissional-preco {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary-text);
+}
+
+/* ── Detalhe do profissional ── */
+.perfil-card {
+  background: white;
+  border: 1.5px solid #dde8e1;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.perfil-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.perfil-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.perfil-nome {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111;
+}
+
+.perfil-preco {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 4px;
+}
+
+.perfil-secao {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.perfil-secao-titulo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+
+.perfil-descricao {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.portfolio-foto {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
