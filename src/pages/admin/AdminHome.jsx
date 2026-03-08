@@ -9,6 +9,7 @@ export default function AdminHome() {
 
   const [usuarios, setUsuarios] = useState(db.users)
   const [filtro, setFiltro] = useState('todos')
+  const [busca, setBusca] = useState('')
 
   const handleLogout = () => {
     logout()
@@ -24,10 +25,15 @@ export default function AdminHome() {
   const clientes = usuarios.filter(u => u.role === 'client')
   const prestadores = usuarios.filter(u => u.role === 'provider')
 
-  const filtrados = filtro === 'todos' ? usuarios
+  const porRole = filtro === 'todos' ? usuarios
     : filtro === 'client' ? clientes
     : filtro === 'provider' ? prestadores
     : usuarios
+
+  const filtrados = porRole.filter(u =>
+    u.name.toLowerCase().includes(busca.toLowerCase()) ||
+    u.email.toLowerCase().includes(busca.toLowerCase())
+  )
 
   return (
     <div>
@@ -40,6 +46,14 @@ export default function AdminHome() {
 
     <div style={{ padding: '32px 24px', maxWidth: '900px', margin: '0 auto' }}>
       <h2 style={{ marginBottom: '16px' }}>Usuários cadastrados</h2>
+
+      <input
+        type="text"
+        placeholder="Pesquisar por nome ou e-mail..."
+        value={busca}
+        onChange={e => setBusca(e.target.value)}
+        style={{ width: '100%', padding: '10px 14px', marginBottom: '16px', border: '1px solid #ccc', borderRadius: '8px', fontSize: '14px', outline: 'none' }}
+      />
 
       <div style={{ display: 'flex', gap: '8px', marginBottom: '16px' }}>
         {['todos', 'client', 'provider'].map(f => (
