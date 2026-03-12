@@ -30,8 +30,24 @@ export default function Login() {
 
   return (
     <div className="auth-page">
+      <Link to="/" style={{
+        position: 'fixed',
+        top: '16px',
+        left: '16px',
+        background: '#4a7c59',
+        color: 'white',
+        padding: '8px 16px',
+        borderRadius: '8px',
+        textDecoration: 'none',
+        fontSize: '14px',
+        fontWeight: '600'
+      }}>
+        ← Início
+      </Link>
+
       <div className="auth-card">
         <div className="auth-logo">Conecta</div>
+       
         <p className="auth-subtitle">Entre na sua conta</p>
 
         <form onSubmit={handleSubmit} className="auth-form">
@@ -77,7 +93,7 @@ export default function Login() {
           </Link>
         </div>
 
-        {/* Dica visual com os logins de teste */}
+     
         <div className="auth-hint">
           <p>🧪 Contas de teste:</p>
           <code>joao@email.com / 123456 → Cliente</code>
