@@ -64,7 +64,7 @@ export default function PrestadorHome() {
       <NavbarPrestador />
 
       <div className="prestador-container">
-        <h1 className="page-title">Meu Perfil Profissional</h1>
+        <h2 style={{ marginBottom: '0' }}>Meu Perfil Profissional</h2>
 
         <div className="prestador-resumo-card">
           <img
@@ -98,10 +98,10 @@ export default function PrestadorHome() {
             )}
           </div>
 
-          <form onSubmit={handleSalvar} className="auth-form">
-            <div className="field-row">
-              <div className="field">
-                <label>Nome completo</label>
+          <form onSubmit={handleSalvar} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <label style={{ fontSize: '13px', fontWeight: 600, color: '#374151' }}>Nome completo</label>
                 <input
                   type="text"
                   name="name"
@@ -109,10 +109,11 @@ export default function PrestadorHome() {
                   onChange={handleChange}
                   placeholder="Seu nome"
                   required
+                  style={{ width: '100%', padding: '10px 14px', border: '1px solid #ccc', borderRadius: '8px', fontSize: '14px', outline: 'none', fontFamily: 'inherit' }}
                 />
               </div>
-              <div className="field">
-                <label>Cidade</label>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <label style={{ fontSize: '13px', fontWeight: 600, color: '#374151' }}>Cidade</label>
                 <input
                   type="text"
                   name="city"
@@ -120,18 +121,20 @@ export default function PrestadorHome() {
                   onChange={handleChange}
                   placeholder="Ex: Campina Grande"
                   required
+                  style={{ width: '100%', padding: '10px 14px', border: '1px solid #ccc', borderRadius: '8px', fontSize: '14px', outline: 'none', fontFamily: 'inherit' }}
                 />
               </div>
             </div>
 
-            <div className="field-row">
-              <div className="field">
-                <label>Categoria de serviço</label>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <label style={{ fontSize: '13px', fontWeight: 600, color: '#374151' }}>Categoria de serviço</label>
                 <select
                   name="category"
                   value={form.category}
                   onChange={handleChange}
                   required
+                  style={{ width: '100%', padding: '10px 14px', border: '1px solid #ccc', borderRadius: '8px', fontSize: '14px', outline: 'none', fontFamily: 'inherit' }}
                 >
                   <option value="">Selecione...</option>
                   {db.categories.map(cat => (
@@ -141,8 +144,8 @@ export default function PrestadorHome() {
                   ))}
                 </select>
               </div>
-              <div className="field">
-                <label>Preço base (R$/diária)</label>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <label style={{ fontSize: '13px', fontWeight: 600, color: '#374151' }}>Preço base (R$/diária)</label>
                 <input
                   type="number"
                   name="price"
@@ -150,12 +153,13 @@ export default function PrestadorHome() {
                   onChange={handleChange}
                   placeholder="Ex: 120"
                   required
+                  style={{ width: '100%', padding: '10px 14px', border: '1px solid #ccc', borderRadius: '8px', fontSize: '14px', outline: 'none', fontFamily: 'inherit' }}
                 />
               </div>
             </div>
 
-            <div className="field">
-              <label>Descrição dos seus serviços</label>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <label style={{ fontSize: '13px', fontWeight: 600, color: '#374151' }}>Descrição dos seus serviços</label>
               <textarea
                 name="description"
                 value={form.description}
@@ -163,13 +167,13 @@ export default function PrestadorHome() {
                 placeholder="Conte sobre sua experiência e o que você oferece..."
                 rows={4}
                 required
+                style={{ width: '100%', padding: '10px 14px', border: '1px solid #ccc', borderRadius: '8px', fontSize: '14px', outline: 'none', fontFamily: 'inherit', resize: 'vertical' }}
               />
             </div>
 
             <button
               type="submit"
-              className="btn-primary"
-              style={{ alignSelf: 'flex-start', padding: '12px 32px' }}
+              style={{ alignSelf: 'flex-start', padding: '6px 14px', cursor: 'pointer', background: '#4a7c59', color: 'white', border: '1px solid #4a7c59', borderRadius: '6px', fontSize: '14px', fontFamily: 'inherit' }}
             >
               Salvar alterações
             </button>
