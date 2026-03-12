@@ -8,10 +8,7 @@ import CadastroPrestador from './pages/auth/CadastroPrestador'
 import ClienteHome from './pages/client/ClienteHome'
 import DetalhesProfissional from './pages/client/DetProfissional'
 import AdminHome from './pages/admin/AdminHome'
-
-
-const ProviderHome = () => <h1 style={{ color: 'white', padding: '40px' }}>Área do Prestador</h1>
-//const AdminHome = () => <h1 style={{ color: 'white', padding: '40px' }}>Painel Admin</h1>
+import PrestadorHome from './pages/provider/PrestadorHome'
 
 export default function App() {
   const { user } = useAuth()
@@ -31,7 +28,7 @@ export default function App() {
       }/>
 
       <Route path="/prestador/*" element={
-        <PrivateRoute role="provider"><ProviderHome /></PrivateRoute>
+        <PrivateRoute role="provider"><PrestadorHome /></PrivateRoute>
       }/>
 
       <Route path="/admin/*" element={
