@@ -31,7 +31,7 @@ export default function ClienteHome() {
           placeholder="Buscar por nome ou serviço..."
           value={busca}
           onChange={e => setBusca(e.target.value)}
-          style={{ width: '100%', padding: '10px', fontSize: '14px', marginBottom: '16px' }}
+          style={{ width: '100%', padding: '10px', fontSize: '14px', marginBottom: '16px', borderRadius: '20px', border: '1px solid #ccc' }}
         />
 
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '24px' }}>

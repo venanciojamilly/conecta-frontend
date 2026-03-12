@@ -27,8 +27,9 @@ export default function Landing() {
           </div>
         </div>
 
-        <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 24px 48px' }}>
-          <h2 style={{ marginBottom: '16px' }}>Profissionais disponíveis</h2>
+        <div style={{ maxWidth: '900px', margin: '0 auto', padding: '48px 24px' }}>
+          <hr style={{ marginBottom: '40px', border: 'none', borderTop: '1px solid #ddd' }} />
+          <h2 style={{ marginBottom: '24px', fontSize: '22px' }}>Profissionais disponíveis</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
             {prestadores.map((p) => (
               <div key={p.id} style={{ background: 'white', border: '1px solid #ddd', borderRadius: '8px', padding: '16px', textAlign: 'center' }}>
@@ -46,7 +47,7 @@ export default function Landing() {
         </div>
       </div>
 
-      <footer style={{ background: '#2d4f38', color: 'white', padding: '32px 24px', textAlign: 'center' }}>
+      <footer style={{ background: '#2d4f38', color: 'white', padding: '32px 24px', textAlign: 'center', borderTop: '4px solid #4a7c59' }}>
         <p style={{ fontSize: '20px', fontWeight: '800', marginBottom: '8px' }}>Conecta</p>
         <p style={{ fontSize: '13px', color: '#a8c5b0', marginBottom: '16px' }}>
           Conectando pessoas a profissionais de confiança
