@@ -523,3 +523,67 @@ html, body {
   display: flex;
   flex-direction: column;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar-links {
+    gap: 4px;
+  }
+
+  .navbar-links a {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-prestadores {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-card {
+    padding: 32px 20px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+  }
+
+  .hero-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 48px 20px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-btn {
+    width: 260px;
+    text-align: center;
+  }
+
+  .auth-card {
+    padding: 32px 20px;
+    margin: 16px;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+}

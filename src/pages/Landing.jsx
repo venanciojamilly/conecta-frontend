@@ -17,7 +17,7 @@ export default function Landing() {
           <p className="hero-desc">
             Encontre eletricistas, faxineiras, encanadores e muito mais na sua região.
           </p>
-          <div className="hero-cta">
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px', marginTop: '24px' }}>
             <Link to="/cadastro/cliente" className="btn-primary hero-btn">
               Preciso de um serviço
             </Link>
@@ -30,7 +30,7 @@ export default function Landing() {
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: '48px 24px' }}>
           <hr style={{ marginBottom: '40px', border: 'none', borderTop: '1px solid #ddd' }} />
           <h2 style={{ marginBottom: '24px', fontSize: '22px' }}>Profissionais disponíveis</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '16px' }}>
             {prestadores.map((p) => (
               <div key={p.id} style={{ background: 'white', border: '1px solid #ddd', borderRadius: '8px', padding: '16px', textAlign: 'center' }}>
                 <img src={p.avatar} alt={p.name} style={{ width: '64px', height: '64px', borderRadius: '50%', marginBottom: '8px' }} />

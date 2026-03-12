@@ -98,6 +98,39 @@ const db = {
     { id: 5, label: "Pintura", icon: "🖌️" },
     { id: 6, label: "Jardinagem", icon: "🌿" }
   ]
+  ,
+
+  // adicione dentro do objeto do db, após categories:
+reviews: [
+  {
+    id: 1,
+    providerId: 2,
+    clientName: 'João Silva',
+    rating: 5,
+    comment: 'Serviço excelente, muito pontual e caprichosa!',
+    date: '10/03/2026'
+  },
+  {
+    id: 2,
+    providerId: 2,
+    clientName: 'Fernanda Costa',
+    rating: 4,
+    comment: 'Ótimo serviço, recomendo!',
+    date: '08/03/2026'
+  },
+  {
+    id: 3,
+    providerId: 3,
+    clientName: 'Roberto Alves',
+    rating: 5,
+    comment: 'Resolveu o problema rápido e cobrou justo.',
+    date: '05/03/2026'
+  },
+],
+servicosContratados: [
+  { clientId: 1, providerId: 2 }, // João contratou Maria
+  { clientId: 1, providerId: 3 }, // João contratou Carlos
+]
 }
 
 export default db
