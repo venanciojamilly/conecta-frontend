@@ -75,7 +75,7 @@ export default function PrestadorHome() {
               onChange={handleChange}
               placeholder="Nome completo"
               required
-              style={{ flex: 1, padding: '10px', fontSize: '14px' }}
+              style={{ flex: 1, padding: '10px', fontSize: '14px', border: '1px solid #ccc', borderRadius: '8px' }}
             />
             <input
               type="text"
@@ -84,7 +84,7 @@ export default function PrestadorHome() {
               onChange={handleChange}
               placeholder="Cidade"
               required
-              style={{ flex: 1, padding: '10px', fontSize: '14px' }}
+              style={{ flex: 1, padding: '10px', fontSize: '14px', border: '1px solid #ccc', borderRadius: '8px' }}
             />
           </div>
 
@@ -94,7 +94,7 @@ export default function PrestadorHome() {
               value={form.category}
               onChange={handleChange}
               required
-              style={{ flex: 1, padding: '10px', fontSize: '14px' }}
+              style={{ flex: 1, padding: '10px', fontSize: '14px', border: '1px solid #ccc', borderRadius: '8px' }}
             >
               <option value="">Selecione categoria...</option>
               {db.categories.map(cat => (
@@ -110,7 +110,7 @@ export default function PrestadorHome() {
               onChange={handleChange}
               placeholder="Preço (R$/diária)"
               required
-              style={{ flex: 1, padding: '10px', fontSize: '14px' }}
+              style={{ flex: 1, padding: '10px', fontSize: '14px', border: '1px solid #ccc', borderRadius: '8px' }}
             />
           </div>
 
@@ -121,7 +121,7 @@ export default function PrestadorHome() {
             placeholder="Descrição dos seus serviços..."
             rows={4}
             required
-            style={{ width: '100%', padding: '10px', fontSize: '14px', marginBottom: '12px' }}
+            style={{ width: '100%', padding: '10px', fontSize: '14px', marginBottom: '12px', border: '1px solid #ccc', borderRadius: '8px' }}
           />
 
           <button type="submit" style={{ padding: '6px 14px', cursor: 'pointer', background: '#4a7c59', color: 'white', border: '1px solid #ccc', borderRadius: '6px' }}>
@@ -138,7 +138,7 @@ export default function PrestadorHome() {
         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '12px' }}>
           {portfolio.map((foto, i) => (
             <div key={i} style={{ position: 'relative' }}>
-              <img src={foto} alt={`Trabalho ${i + 1}`} style={{ width: '160px', height: '120px', objectFit: 'cover' }} />
+              <img src={foto} alt={`Trabalho ${i + 1}`} style={{ width: '160px', height: '120px', objectFit: 'cover', border: '1px solid #ccc', borderRadius: '8px' }} />
               <button
                 onClick={() => handleRemoverFoto(i)}
                 style={{ position: 'absolute', top: '4px', right: '4px', fontSize: '12px', padding: '2px 6px', cursor: 'pointer', background: 'white', border: '1px solid #ccc', borderRadius: '4px' }}
@@ -149,7 +149,7 @@ export default function PrestadorHome() {
           ))}
         </div>
 
-        <button onClick={handleAdicionarFoto} style={{ padding: '6px 14px', cursor: 'pointer' }}>
+        <button onClick={handleAdicionarFoto} style={{ padding: '6px 14px', cursor: 'pointer', background: '#4a7c59', color: 'white', border: '1px solid #ccc', borderRadius: '6px' }}>
           + Adicionar foto
         </button>
 
@@ -163,24 +163,24 @@ export default function PrestadorHome() {
             <img src={user.avatar} alt={form.name} style={{ width: '80px', height: '80px', borderRadius: '50%' }} />
             <div>
               <h2>{form.name}</h2>
-              <p>{form.category}</p>
-              <p>📍 {form.city}</p>
-              <p>⭐ {user.rating || '—'} ({user.reviews || 0} avaliações)</p>
-              <p><strong>R$ {form.price} / diária</strong></p>
+              <p style={{ fontSize: '14px', color: '#666' }}>{form.category}</p>
+              <p style={{ fontSize: '14px', color: '#666' }}>📍 {form.city}</p>
+              <p style={{ fontSize: '14px', color: '#666' }}>⭐ {user.rating || '—'} ({user.reviews || 0} avaliações)</p>
+              <p style={{ fontSize: '16px' }}>R$ {form.price} / diária</p>
             </div>
           </div>
 
           <hr style={{ margin: '16px 0' }} />
 
           <h3>Sobre</h3>
-          <p>{form.description || 'Nenhuma descrição adicionada.'}</p>
+          <p style={{ fontSize: '14px', color: '#666' }}>{form.description || 'Nenhuma descrição adicionada.'}</p>
 
           <hr style={{ margin: '16px 0' }} />
 
           <h3>Portfólio</h3>
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
             {portfolio.map((foto, i) => (
-              <img key={i} src={foto} alt={`Trabalho ${i + 1}`} style={{ width: '160px', height: '120px', objectFit: 'cover' }} />
+              <img key={i} src={foto} alt={`Trabalho ${i + 1}`} style={{ width: '160px', height: '120px', objectFit: 'cover', border: '1px solid #ccc', borderRadius: '8px' }} />
             ))}
           </div>
         </div>
