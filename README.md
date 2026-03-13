@@ -40,7 +40,7 @@ O sistema foi desenhado para atender três perfis distintos de usuários: client
 4. Painel Administrativo (Admin) 
 
 > * **Dashboard exclusivo:** Ambiente reservado para a gestão geral da plataforma.
-> * **Gestão de contas:** Tabelas listando usuários cadastrados com opções visuais para aprovar, suspender ou excluir contas de clientes e prestadores.
+> * **Gestão de contas:** Tabelas listando usuários cadastrados com opções visuais para  suspender ou excluir contas de clientes e prestadores.
 
 
 ---
