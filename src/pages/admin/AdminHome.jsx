@@ -52,7 +52,7 @@ export default function AdminHome() {
         placeholder="Pesquisar por nome ou e-mail..."
         value={busca}
         onChange={e => setBusca(e.target.value)}
-        style={{ width: '100%', padding: '10px 14px', marginBottom: '16px', border: '1px solid #ccc', borderRadius: '8px', fontSize: '14px', outline: 'none' }}
+  git       style={{ width: '100%', padding: '10px 14px', marginBottom: '16px', border: '1px solid #ccc', borderRadius: '8px', fontSize: '14px', outline: 'none' }}
       />
 
       <div style={{ display: 'flex', gap: '8px', marginBottom: '16px' }}>
@@ -77,13 +77,13 @@ export default function AdminHome() {
             <tr key={u.id} style={{ borderBottom: '1px solid #eee' }}>
               <td style={{ padding: '10px 8px' }}>{u.name}</td>
               <td style={{ padding: '10px 8px', color: '#666', fontSize: '13px' }}>{u.email}</td>
-              <td style={{ padding: '10px 8px', fontSize: '13px' }}>{u.role}</td>
+              <td style={{ padding: '10px 8px', fontSize: '13px' }}>{u.role === 'client' ? 'Cliente' : u.role === 'provider' ? 'Prestador' : 'Administrador'}</td>
               <td style={{ padding: '10px 8px' }}>
                 <div style={{ display: 'flex', gap: '6px' }}>
-                  <button style={{ fontSize: '12px', padding: '4px 8px', cursor: 'pointer' }}>Aprovar</button>
-                  <button style={{ fontSize: '12px', padding: '4px 8px', cursor: 'pointer' }}>Suspender</button>
+                  {/* <button style={{ fontSize: '12px', padding: '4px 8px', cursor: 'pointer', border: '1px solid #ccc', borderRadius: '4px' }}>Aprovar</button> */}
+                  <button style={{ fontSize: '12px', padding: '4px 8px', cursor: 'pointer', border: '1px solid #ccc', borderRadius: '4px' }}>Suspender</button>
                   {u.role !== 'admin' && (
-                    <button onClick={() => handleExcluir(u.id)} style={{ fontSize: '12px', padding: '4px 8px', cursor: 'pointer', color: 'red' }}>Excluir</button>
+                    <button onClick={() => handleExcluir(u.id)} style={{ fontSize: '12px', padding: '4px 8px', cursor: 'pointer', color: 'red', border: '1px solid #ccc', borderRadius: '4px' }}>Excluir</button>
                   )}
                 </div>
               </td>
